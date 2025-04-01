@@ -1,0 +1,1228 @@
+* {
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* Només per l’inici */
+body.index {
+    height: 145vh;
+    position: relative;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), 
+        url(../img/tgnfondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%; /* Perquè ocupi tota l'alçada del top-sec */
+}
+
+.lang-select select {
+    padding: 3px 8px; /* Redueix lleugerament el padding */
+    height: 30px; /* Ajusta la mida perquè coincideixi amb la resta d’elements */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+/* TOP HEADER (BANNER SUPERIOR) */
+.top-sec {
+    width: 100%;
+    background-color: #f8f8f8; /* Color fons gris clar */
+    height: 45px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.52);
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Ajuntament de Tarragona */
+.top-logo img {
+    height: 35px; /* Ajusta l'altura per fer-lo més estret si cal */
+    width: auto; /* Manté la proporció original */
+    display: block;
+    margin-right: 0;
+}
+
+/* Xarxes socials centrades */
+.top-social {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.top-social a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+/* Contenidor de Btn + Selector de Llengua */
+.top-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Estil per la llista d'enllaços de la dreta */
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espai entre elements */
+}
+--------------------------
+/* Contenidor del link Meteo */
+.top-meteo {
+    display: flex;
+    align-items: center;
+}
+
+/* Link Meteo (contenidor de text i icona) */
+.top-meteo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #8B8B8B; /* Gris inicial */
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Icona Meteo */
+.meteo-icon {
+    width: 38px;
+    height: 38px;
+    filter: brightness(0) opacity(0.6); /* Gris suau */
+    transition: filter 0.3s ease;
+    margin-left: -11px; /* Mou cap a l'esquerra */
+}
+
+/* Hover: afecta al link complet (text + icona) */
+.top-meteo a:hover {
+    color: #000000; /* Text negre */
+}
+
+.top-meteo a:hover .meteo-icon {
+    filter: brightness(0); /* Icònica negra */
+}
+
+
+
+
+------------------------------------------
+/* Contenidor del botó */
+.mode-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    padding-top: 5px; 
+}
+
+
+/* Ocultem el checkbox */
+.mode-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Aspecte del slider */
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    background-color: #a9a1a1; /* 🔆 Fons clar per al sol */
+    border: 2px solid #e2dede;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Per defecte (tema clar, sol) */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #ffffff url(../img/header-sun.png) no-repeat center center;
+    background-size: 12px 12px;
+    transition: 0.4s;
+    top: 1px;
+    left: 2px;
+    border-radius: 50%;
+    transform: translateX(0);
+}
+
+/* Quan està activat (tema fosc, lluna) */
+body.dark .slider {
+    background-color: #222222; /* 🌙 Fons fosc per a la lluna */
+}
+
+body.dark .slider::before {
+    background: #ffffff url(../img/header-moon.png) no-repeat center center;
+    background-size: 12px 12px;
+    transform: translateX(22px);
+}
+
+/* Separador | entre Btn i Selector de Llengua */
+.separator {
+    margin: 0 10px;
+    font-size: 16px;
+    color: rgba(192, 191, 191, 0.7); /* Color gris suau */
+}
+
+/* Selector de llengua */
+.lang-select select {
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(13, 57, 105);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 5%;
+    z-index: 1000;
+    position: relative; /* Manté el header sota el top-sec */
+    min-height: 70px; /* Manté una mida fixa */
+    
+    /* ✅ Centrar tots els elements dins del header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center; /* Alineació vertical */
+}
+
+.logo {
+    height: 65px; /* Ajusta segons el tamany del logo */
+    margin-right: 10px; /* Espai entre el logo i el text */
+}
+
+.titulo {
+    font-size: 24px; /* Ajusta la mida del text */
+    font-weight: bold;
+    color: white;
+    white-space: nowrap; /* Evita que el text salti a una nova línia */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #F2F2F2F2;
+}
+
+.item:hover{
+    color: #0ca8b0;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+/* Per als elements del menú */
+.menu .item a {
+    text-decoration: none;
+    color: #F2F2F2;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Efecte hover */
+.menu .item a:hover {
+    color: #0ca8b0;
+}
+
+/* Per al botó Contacte */
+.menu .btn a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #ff2258;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Hover del botó */
+.menu .btn a:hover {
+    background-color: #ee0a43;
+}
+
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+.btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #ff2258;
+    color: aliceblue;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ee0a43;
+}
+
+@media(max-width:991px) {
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 0;
+    }
+
+    #menu:checked ~ .menu {
+        display: initial;
+    }
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Això assegura que el main ocupi tot l'espai disponible */
+}
+
+.contenido {
+    max-width: 900px; /* Ample màxim del text */
+    margin: 150px auto 50px auto; /* Espai per no sobreposar-se al header */
+    padding: 20px;
+    color: white; /* Color del text */
+    text-align: justify;
+}
+
+.contenido h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+.footer {
+    width: 100%; /* Que ocupi tota l'amplada */
+    background-color: #323337; /* Color de fons */
+    color: white; /* Text blanc */
+    text-align: center; /* Centrat */
+    padding: 15px 0; /* Espaiat superior i inferior */
+    position: relative; /* Manté el flux natural de la pàgina */
+    bottom: 0;
+    left: 0;
+}
+
+
+body {
+    padding-bottom: 50px; /* Ajusta segons la mida del footer */
+}
+
+
+--------------------------------------------------
+.contactar-frm h2 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.03px;
+}
+
+/* Secció del formulari de contacte */
+.contact-form-sec {
+    width: 100%;
+    padding: 75px 0px 100px;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.contactar-frm {
+    width: 100%;
+    padding: 0px 200px;
+    text-align: center;
+}
+
+.contactar-frm h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2B2B2B;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contactar-frm p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2B2B2B;
+    margin-bottom: 30px;
+}
+
+.form-box {
+    width: 100%;
+}
+
+.two-col {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.frm-input-ctrl {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #2B2B2B;
+    background: #fff;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.chk-box-lft {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.chk-box-lft label {
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #2B2B2B;
+    margin-bottom: 10px;
+}
+
+.chk-box-lft input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn-rgt {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.env-btn {
+    padding: 15px 40px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.env-btn:hover {
+    background-color: #333;
+}
+
+
+#confirmationMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;  /* ✅ NO es veu inicialment */
+}
+
+
+
+.footer {
+    width: 100%;
+    background-color: #323337;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.contact-form-sec {
+    min-height: calc(100vh - 150px); /* Ajusta 150px o el que mesuri el footer */
+    padding: 75px 0px 100px;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+--------------------------------------------------------------
+/* Imatge superior fixa (Parallax efecte) */
+.banner-membres {
+    position: relative;
+    height: 100vh; /* Manté la imatge ocupant tota la pantalla */
+    overflow: hidden; /* ❌ Evita que la imatge sobresurti */
+}
+
+.banner-membres img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* ✅ Canviem de `fixed` a `absolute` */
+    top: 0;
+    left: 0;
+    z-index: -2; /* ✅ La posem més al fons perquè no sobresurti */
+}
+
+
+/* Secció de membres */
+.membres-sec {
+    background: #f5f5f5;
+    padding: 5px 0 100px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 76vh; /* Baixa la secció just després del banner */
+    margin-bottom: -11vh;
+}
+
+.membres-sec h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.membres-sec p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #2B2B2B;
+    margin-bottom: 40px;
+}
+
+.membres-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* ✅ Ara sí permet que les targetes baixin en pantalles petites */
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ✅ Targetes amb alçada fixa i igualada */
+.membre-card {
+    width: 220px;
+    height: 410px; /* 🔹 Alçada fixa per a totes */
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Per començar pel principi */
+}
+
+/* ✅ Imatges amb alçada fixa i sense deformació */
+.membre-card img {
+    width: 100%;
+    height: 230px; /* 🔹 Totes les imatges tenen la mateixa mida */
+    object-fit: cover; /* 🔹 Ajusta sense deformar */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* ✅ Text dins de la targeta */
+.membre-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.membre-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* 🔹 RESPONSIVE - 2x2 (50%) */
+@media (max-width: 768px) {
+    .membres-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 targetes per fila */
+        gap: 20px;
+    }
+
+    .membre-card {
+        width: 100%; /* ✅ Ocupa tot l'ample de la columna */
+    }
+}
+
+/* 🔹 RESPONSIVE - 1 per fila (25%) */
+@media (max-width: 480px) {
+    .membres-grid {
+        grid-template-columns: repeat(1, 1fr); /* ✅ 1 targeta per fila */
+    }
+}
+
+-----------------------------------------------------
+/* Secció Projecte */
+.projecte-sec {
+    background: #f5f5f5;
+    padding: 180px 20px 150px; /* ✅ Augmenta l'espai abans del títol */
+    text-align: center;
+}
+
+/* Contenidor del títol principal */
+.projecte-titol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30vh; /* ✅ Ajusta l'altura per centrar-ho */
+}
+
+/* Títol gran */
+.projecte-titol h1 {
+    font-size: 42px; /* ✅ Més gran perquè es vegi clar */
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px; /* ✅ Espai entre el títol i el subtítol */
+}
+
+/* Subtítol */
+.projecte-titol h3 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 40px; /* ✅ Més espai abans del contingut */
+}
+
+/* Contingut del projecte */
+.projecte-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify; /* ✅ Justificar text */
+}
+
+/* Títols dins de la secció */
+.projecte-content h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px; /* ✅ Més espai sota els títols */
+    text-align: left;
+}
+
+/* Text del projecte */
+.projecte-content p {
+    font-size: 16px;
+    color: #2B2B2B;
+    margin-bottom: 35px; /* ✅ Més espai entre els paràgrafs */
+}
+
+/* Llista de detalls */
+.projecte-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Elements de la llista */
+.projecte-content li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px; /* ✅ Més espai entre els ítems de la llista */
+    text-align: justify;
+}
+
+/* Espai entre el `main` i el `footer` */
+footer {
+    margin-top: 70px; /* ✅ Més espai abans del footer */
+}
+
+/* ✅ Parallax per a la secció Projecte */
+.parallax-projecte {
+    background-image: url('../img/fondo-mapa.png'); /* Imatge per a Projecte */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+}
+----------------------------------------------------
+
+/* Secció Inici (Projecte) */
+.inici-sec {
+    background: #f5f5f5;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.timeline-item {
+    font-size: 16px;
+    padding: 5px;
+    border-left: 4px solid #0ca8b0;
+    margin-bottom: 10px;
+}
+
+canvas {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+
+/* Títol Principal */
+.inici-sec h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    text-align: center; /* ✅ Centra el text */
+    margin-bottom: 40px; /* ✅ Baixa el títol dins la targeta */
+    margin-top: 20px; /* ✅ Separa del marge superior */
+    padding-top: 15px; /* ✅ Espai intern per evitar que quedi enganxat */
+}
+
+/* Subtítol Introductori */
+.intro-text {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenidor de targetes */
+.inici-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* ✅ Contenidor de totes les targetes */
+.inici-card, .motivacio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ✅ Centra els elements dins la targeta */
+    text-align: justify;
+    width: 80%;
+    max-width: 1850px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgb(218, 245, 249);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.inici-card h2 {
+    text-align: center;  /* ✅ Centra el títol horitzontalment */
+    margin-bottom: 20px; /* ✅ Afegeix espai entre el títol i el text */
+}
+
+
+/* ✅ Títol per damunt de tot */
+.motivacio-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ✅ Ajustem la imatge per sota del títol */
+.motivacio-card img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ✅ Contingut justificat i ben alineat */
+.motivacio-card .text-content {
+    text-align: justify;
+    width: 100%;
+}
+
+/* ✅ Llista d'objectius */
+.motivacio-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.motivacio-card li::before {
+    content: "✔ ";
+    color: #caf1f3;
+    font-weight: bold;
+}
+
+
+
+/* Contingut de les targetes */
+.inici-card h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.inici-card p {
+    font-size: 16px;
+    color: #2B2B2B;
+    text-align: justify; /* ✅ Justificar text */
+    max-width: 1850px; /* Manté el text llegible */
+}
+
+/* Imatges dins les targetes */
+.inici-card img {
+    width: 100%; /* Fes que ocupi tota l'amplada de la targeta */
+    max-width: 700px; /* Evita que sigui massa gran en pantalles grans */
+    height: auto; /* Manté la proporció */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Espai entre la imatge i el text */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inici-card {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .inici-card img {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        height: 180px;
+    }
+}
+
+
+
+
+
+
+-----------------------------------------------------
+/* Secció Mapa */
+.mapa-sec {
+    background: #f5f5f5;
+    padding: 120px 40px; /* ✅ Augmentem l'espai per a més respiració */
+    text-align: center;
+    margin-bottom: 50px; /* ✅ Espai extra sota la secció */
+}
+
+/* ✅ Centrar el títol i el subtítol de la secció */
+.mapa-sec h2, 
+.mapa-sec p {
+    text-align: center;
+    width: 100%;
+    max-width: 900px; /* ✅ Evita que sigui massa ample */
+    margin: 0 auto 20px auto; /* ✅ Centra i afegeix espai per sota */
+    margin-top: 30px;
+}
+
+
+.mapa-card {
+    width: 80%; /* ✅ Que ocupi més espai a la pantalla */
+    max-width: 1000px; /* ✅ Limitem la mida per no desbordar */
+    background: rgb(218, 245, 249);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto; /* ✅ Centrar i donar marge entre targetes */
+}
+
+/* ✅ Ampliem la mida del mapa */
+.mapa-card iframe {
+    height: 500px; /* ✅ Ara és més alt perquè es vegi millor */
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contenidor principal */
+.container-inici {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Contenidor de mapa i text */
+.container {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estil per a les columnes */
+.column-66 {
+    width: 66%;
+    padding: 20px;
+}
+
+.column-33 {
+    width: 33%;
+    padding: 20px;
+}
+
+/* Text justificat */
+.text-font {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* Mapa */
+#map { 
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Parallax per a la secció Mapa */
+.parallax-mapa {
+    background-image: url('../img/hero.jpg'); /* Imatge diferent per a Mapa */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .column-66, .column-33 {
+        width: 100%;
+    }
+    #map {
+        height: 400px;
+    }
+}
+
+
+
+#scrollToTopBtn {
+    display: none; /* ❌ Ocult per defecte */
+    position: fixed;
+    bottom: 50px; /* ✅ Just per sobre del footer */
+    right: 20px; /* ✅ A la dreta */
+    z-index: 1000; /* ✅ Assegura que estigui per sobre d'altres elements */
+    border: none;
+    outline: none;
+    background-color: #464646; /* ✅ Color fosc */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* ✅ Efecte quan es passa el cursor per sobre */
+#scrollToTopBtn:hover {
+    background-color: #0ca8b0; /* ✅ Canvia al color principal del projecte */
+}
+
+/* ✅ Suavitzar l'aparició i desaparició */
+#scrollToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+
+#scrollToTopBtn.hide {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+-----------------------------------------------------------------------------
+/* Colors normals (clar) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: rgb(13, 57, 105);
+}
+
+.footer {
+    background-color: #323337;
+
+}
+
+/* Quan activem el dark mode */
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark header {
+    background-color: #1e1e1e;
+}
+
+body.dark .footer {
+    background-color: #1e1e1e;
+}
+
+
+
+/* ✅ Canvi de color del text quan està activat el mode fosc */
+body.dark {
+    color: #ffffff; /* Text blanc per tot el cos */
+}
+
+/* ✅ Ajustar els textos principals per garantir llegibilitat */
+body.dark h1, 
+body.dark h2, 
+body.dark h3, 
+body.dark p, 
+body.dark li {
+    color: #ffffff; /* Textos en blanc */
+}
+
+/* ✅ Ajust per les targetes en mode fosc */
+body.dark .inici-card,
+body.dark .mapa-card {
+    background: #222222; /* Fons fosc per les targetes */
+    color: #ffffff; /* Text blanc dins les targetes */
+}
+
+/* ✅ Ajust del botó de canvi de tema */
+body.dark .slider {
+    background-color: #444; /* Fons més fosc pel botó */
+}
+
+/* ✅ Ajustar els enllaços en mode fosc */
+body.dark a {
+    color: #0ca8b0; /* Un color més clar per a enllaços */
+}
+
+body.dark a:hover {
+    color: #66d9e8; /* Canvi de color al passar el cursor */
+}
+
+
+
+/* ✅ Ajustar el fons de la targeta en mode fosc */
+body.dark .motivacio-card {
+    background-color: #222222; /* Color de fons fosc */
+    color: #ffffff; /* Text blanc */
+    border: 1px solid #444; /* Línia suau per marcar la separació */
+}
+
+/* ✅ Ajustar el títol dins de la targeta */
+body.dark .motivacio-card h2 {
+    color: #ffffff; /* Convertir el títol a blanc */
+}
+
+/* ✅ Ajustar el color dels objectius i text */
+body.dark .motivacio-card p,
+body.dark .motivacio-card ul {
+    color: #ffffff; /* Convertir text a blanc */
+}
+
+/* ✅ Ajustar les icones de la llista en mode fosc */
+body.dark .motivacio-card li::before {
+    color: #0ca8b0; /* Manté el color verd-llum de les icones */
+}
+
+/* ✅ Ajustar la imatge per a què encaixi millor */
+body.dark .motivacio-card img {
+    filter: brightness(0.8); /* Reduir lleugerament la brillantor */
+}
+
+
+
+
+/* ✅ Ajustar el fons de la secció de membres en mode fosc */
+body.dark .membres-sec {
+    background-color: #1e1e1e; /* Fons fosc per tota la secció */
+}
+
+/* ✅ Ajustar les targetes de membres en mode fosc */
+body.dark .membre-card {
+    background-color: #222222; /* Fons fosc per les targetes */
+    color: #ffffff; /* Text blanc */
+    border: 1px solid #444; /* Línia suau per donar estructura */
+}
+
+/* ✅ Ajustar el color dels títols i textos dins de les targetes */
+body.dark .membre-card h3,
+body.dark .membre-card p {
+    color: #ffffff; /* Convertir text a blanc */
+}
+
+/* ✅ Ajustar el fons de les imatges per integrar-se millor en mode fosc */
+body.dark .membre-card img {
+    filter: brightness(0.8); /* Reduir una mica la brillantor per adaptar-se al mode fosc */
+}
+
+/* ✅ Ajustar el títol de la secció en mode fosc */
+body.dark .membres-sec h2 {
+    color: #ffffff; /* Títol en blanc */
+}
+
+
+
+/* ✅ Ajustar el fons de la secció de contacte en mode fosc */
+body.dark .contact-form-sec {
+    background-color: #222222; /* Color de fons fosc */
+    color: #ffffff; /* Text blanc */
+}
+
+/* ✅ Ajustar el color dels títols i textos */
+body.dark .contact-form-sec h2,
+body.dark .contact-form-sec p {
+    color: #ffffff;
+}
+
+/* ✅ Ajustar el fons dels camps del formulari */
+body.dark input[type="text"],
+body.dark input[type="email"],
+body.dark textarea {
+    background-color: #333; /* Camps de formulari foscos */
+    color: #ffffff; /* Text blanc */
+    border: 1px solid #555; /* Línia suau per marcar separació */
+}
+
+/* ✅ Canviar el color del text placeholder en mode fosc */
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+    color: #bbbbbb;
+}
+
+/* ✅ Ajustar el color del botó d'enviar en mode fosc */
+body.dark .env-btn {
+    background-color: #0ca8b0;
+    color: #ffffff;
+}
+
+body.dark .env-btn:hover {
+    background-color: #089199;
+}
+
+/* ✅ Ajustar el missatge de confirmació en mode fosc */
+body.dark .confirm-message {
+    background-color: #0ca8b0;
+    color: white;
+    border: 1px solid #089199;
+}
+
+body.dark .top-meteo a {
+    color: #8B8B8B !important; /* ✅ Blanc en mode fosc */
+}
+
+body.dark .top-social,
+body.dark .separator {
+    color: inherit !important; /* ✅ Manté el color original */
+}

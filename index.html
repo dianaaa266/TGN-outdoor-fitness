@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGN Outdoor Fitness - Contacte</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/0b748866b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top header -->
+    <div class="top-sec">
+        <div class="top-container">
+
+            <div class="top-logo">
+                <a href="https://www.tarragona.cat" target="_blank">
+                    <img src="img/ajuntament.png" alt="Ajuntament de Tarragona">
+                </a>
+            </div>
+
+            <div class="separator">|</div>
+
+            <div class="top-meteo">
+                <a href="https://www.eltiempo.es/tarragona.html" target="_blank">
+                    <span class="meteo-text">METEO</span>
+                    <img class="meteo-icon" src="img/header-meteo.png" alt="Icona Meteo">
+                </a>
+            </div>
+
+            <div class="top-social">
+                <a href="https://www.facebook.com" target="_blank"><img width="16" height="16" src="https://parcastronomic.cat/wp-content/themes/montsec/assets/images/header-fb.svg" alt="Facebook"></a> |
+                <a href="https://twitter.com" target="_blank"><img width="16" height="16" src="https://parcastronomic.cat/wp-content/themes/montsec/assets/images/x.svg" alt="Twitter"></a> |
+                <a href="https://www.instagram.com" target="_blank"><img width="16" height="16" src="https://parcastronomic.cat/wp-content/themes/montsec/assets/images/header-ig.svg" alt="Instagram"></a> |
+                <a href="https://www.youtube.com" target="_blank"><img width="17" height="12" src="https://parcastronomic.cat/wp-content/themes/montsec/assets/images/header-yt.svg" alt="YouTube"></a> |
+                <a href="https://www.whatsapp.com" target="_blank"><img width="20" height="13" src="https://parcastronomic.cat/wp-content/themes/montsec/assets/images/header-wc.svg" alt="WhatsApp"></a>
+            </div>
+
+            <div class="top-right">
+                <ul class="top-links">
+                    <li class="mode-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <label for="theme-toggle" class="slider round"></label>
+                    </li>
+
+                    <li class="separator">|</li>
+
+                    <li class="lang-select">
+                        <select class="select-lang">
+                            <option value="#">CA</option>
+                            <option value="#">ES</option>
+                            <option value="#">EN</option>
+                        </select>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <script>
+            const toggle = document.getElementById('theme-toggle');
+            toggle.addEventListener('change', () => {
+                document.body.classList.toggle('dark', toggle.checked);
+            });
+        </script>
+
+    </div>
+
+    <!-- Header amb menú -->
+    <header> 
+        <div class="header-left">
+            <img src="img/logo.png" class="logo" alt="Logo TGN Outdoor Fitness">
+            <span class="titulo">TGN Outdoor Fitness</span>
+        </div>
+
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="img/menu.png" class="menu-icono" alt="Menú">
+        </label>
+
+        <ul class="menu">
+            <li class="item"><a href="index.html">Inici</a></li>
+            <li class="item"><a href="membres.html">Membres</a></li>
+            <li class="item"><a href="projecte.html">Projecte</a></li>
+            <li class="item"><a href="mapa.html">Mapa</a></li>
+            <li class="btn"><a href="contacte.html">Contacte</a></li>
+        </ul>
+    </header>
+    
+    <main>
+    
+        <!-- ✅ Efecte Parallax per a la secció Projecte -->
+        <section class="parallax-projecte"></section>
+    
+        <!-- Secció Projecte -->
+        <section class="projecte-sec">
+    
+            <!-- Títol principal -->
+            <div class="projecte-titol">
+                <h1>Projecte TGN Outdoor Fitness</h1>
+                <h3>Fomentant l'activitat física a l'aire lliure a Tarragona</h3>
+            </div>
+    
+            <div class="projecte-content">
+                <h3>Informació</h3>
+                <p>Projecte TGN Outdoor Fitness
+                    Aquest és un projecte innovador que té com a objectiu fomentar la pràctica esportiva a l'aire lliure a Tarragona, aprofitant els espais naturals i urbans de la ciutat per promoure un estil de vida actiu i saludable. TGN Outdoor Fitness posa en valor la relació entre esport i entorn, oferint a la ciutadania alternatives d'entrenament funcional en espais oberts, millorant així la salut i el benestar de la població.
+                </p>
+    
+                <h3>Resum</h3>
+                <p>El projecte TGN Outdoor Fitness té com a objectiu principal convertir Tarragona en una referència en activitats físiques a l'aire lliure. Per això, s'analitzen els espais verds i urbans disponibles per dissenyar circuits d'entrenament que siguin accessibles i eficients.</p>
+    
+                <h3>📌 Detalls del projecte</h3>
+                <ul>
+                    <li><strong>Referència:</strong> TGN-OUTDOOR-2025</li>
+                    <li><strong>Coordinadora:</strong> Diana Maria Giurgiu</li>
+                    <li><strong>Entitat sol·licitant:</strong> Universitat Rovira i Virgili</li>
+                    <li><strong>Centre:</strong> Departament de Geografia</li>
+                    <li><strong>Duració:</strong> 1 any (2025 - 2026)</li>
+                    <li><strong>Paraules clau:</strong> esport a l'aire lliure, Tarragona, salut i benestar, entrenament funcional</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 TGN Outdoor Fitness - Tots els drets reservats</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Tornar a dalt">
+        ↑
+    </button>
+  
+    <script src="js/script.js"></script>
+</body>
+</html> 
