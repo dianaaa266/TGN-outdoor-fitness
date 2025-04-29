@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TGN Outdoor Fitness - Contacte</title>
+    <title>TGN Outdoor Fitness - Inici</title>
     <link rel="icon" href="img/logo.png" type="image/png">
     <script src="https://kit.fontawesome.com/0b748866b8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 
 <body>
@@ -104,6 +105,8 @@
                 <h1>Projecte TGN Outdoor Fitness</h1>
                 <h3>Fomentant l'activitat física a l'aire lliure a Tarragona</h3>
             </div>
+            
+               
     
             <div class="projecte-content">
                 <h3>Informació</h3>
@@ -113,17 +116,69 @@
     
                 <h3>Resum</h3>
                 <p>El projecte TGN Outdoor Fitness té com a objectiu principal convertir Tarragona en una referència en activitats físiques a l'aire lliure. Per això, s'analitzen els espais verds i urbans disponibles per dissenyar circuits d'entrenament que siguin accessibles i eficients.</p>
-    
-                <h3>📌 Detalls del projecte</h3>
-                <ul>
-                    <li><strong>Referència:</strong> TGN-OUTDOOR-2025</li>
-                    <li><strong>Coordinadora:</strong> Diana Maria Giurgiu</li>
-                    <li><strong>Entitat sol·licitant:</strong> Universitat Rovira i Virgili</li>
-                    <li><strong>Centre:</strong> Departament de Geografia</li>
-                    <li><strong>Duració:</strong> 1 any (2025 - 2026)</li>
-                    <li><strong>Paraules clau:</strong> esport a l'aire lliure, Tarragona, salut i benestar, entrenament funcional</li>
-                </ul>
+                
+                
+                <div class="w3-row w3-border" style="margin-top: 40px;">
+
+                    <!-- Columna esquerra: Detalls del projecte -->
+                    <div class="w3-container w3-half" style="padding: 20px;">
+                        <h3>📌 Detalls del projecte</h3>
+                        <ul>
+                            <li><strong>Referència:</strong> TGN-OUTDOOR-2025</li>
+                            <li><strong>Coordinadora:</strong> Diana Maria Giurgiu</li>
+                            <li><strong>Entitat sol·licitant:</strong> Universitat Rovira i Virgili</li>
+                            <li><strong>Centre:</strong> Departament de Geografia</li>
+                            <li><strong>Duració:</strong> 1 any (2025 - 2026)</li>
+                            <li><strong>Paraules clau:</strong> esport a l'aire lliure, Tarragona, salut i benestar, entrenament funcional</li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna dreta: Targeta W3 -->
+                    <div class="w3-container w3-half" style="padding: 20px;">
+
+                        <div class="w3-card-4" style="width:100%; max-width:400px; margin: 0 auto;">
+                            <header class="w3-container w3-light-grey">
+                                <h3>Diana Maria Giurgiu</h3>
+                            </header>
+                            <div class="w3-container">
+                                <hr>
+                                <img src="img/didi.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                                <p>Coordinadora del projecte TGN Outdoor Fitness. Apassionada de la geografia i l’esport a l’aire lliure.</p><br>
+                            </div>
+                            <button class="w3-button w3-block w3-dark-grey">Contactar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                 
             </div>
+            <!-- Botó centrat -->
+<div class="w3-container" style="text-align: center; margin-top: 50px;">
+    <button onclick="toggleInfo()" class="w3-button w3-teal w3-large w3-round-large">Més Informació</button>
+  </div>
+  
+  <!-- Informació amagada inicialment -->
+  <div id="infoExtra" class="w3-container w3-hide w3-animate-opacity" style="margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto; background: #e0f7fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+    <h3> Descobreix el que t'ofereix TGN Outdoor Fitness!</h3>
+    <p>A TGN Outdoor Fitness no només pots entrenar a l'aire lliure, sinó que també formes part d'una comunitat saludable i motivadora. Oferim circuits d'entrenament funcional adaptats a totes les edats i nivells, en els espais més emblemàtics de Tarragona.</p>
+    <p>Gaudeix d'activitats dirigides, rutes d'entrenament, tallers d'estiraments i sessions especials de "fitness al parc" totalment gratuïtes!</p>
+    <p>🍴 I recorda: cada <strong>dissabte de cada mes</strong>, organitzem un <strong>sopar fit</strong> on compartim menjar saludable, experiències i motivació per continuar millorant junts!</p>
+  </div>
+  
+  <!-- Script per mostrar/ocultar -->
+  <script>
+  function toggleInfo() {
+    var x = document.getElementById("infoExtra");
+    if (x.classList.contains("w3-hide")) {
+      x.classList.remove("w3-hide");
+    } else {
+      x.classList.add("w3-hide");
+    }
+  }
+  </script>
+  
+
         </section>
     </main>
     
@@ -139,4 +194,4 @@
   
     <script src="js/script.js"></script>
 </body>
-</html> 
+</html>

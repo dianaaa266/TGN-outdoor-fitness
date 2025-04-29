@@ -216,7 +216,7 @@ header {
     min-height: 70px; /* Manté una mida fixa */
     
     /* ✅ Centrar tots els elements dins del header */
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
 }
