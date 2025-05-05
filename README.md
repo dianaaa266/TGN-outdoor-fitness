@@ -4,7 +4,6 @@ El projecte **TGN Outdoor Fitness** té com a objectiu fomentar l'activitat fís
 
 Aquest projecte es basa en la geografia urbana i la seva capacitat per facilitar l'accés a espais d'activitat física, millorant la qualitat de vida dels ciutadans mitjançant l'ús sostenible dels espais públics. La web ofereix informació sobre els circuits, els membres de l'equip i els objectius del projecte, així com la possibilitat de contactar directament amb l'equip per a més informació o col·laboracions.
 
----
 
 ## **Dades/Continguts 📋**
 
@@ -43,7 +42,6 @@ El **logo** de **TGN Outdoor Fitness** ha estat creat utilitzant l'eina **Logo C
 
 <img src="img/logo.png" width="155" height="155">
 
----
 
 ## **Estructura de la web 🔗**
 
@@ -73,7 +71,6 @@ La pàgina web del projecte **TGN Outdoor Fitness** està dissenyada per ser cla
 
 La web està dissenyada seguint els principis de **simplicitat** i **accessibilitat**, amb una estructura que facilita la navegació, a més d'optimitzar-se per a dispositius mòbils per garantir una bona experiència d'usuari a totes les plataformes.
 
----
 
 ## **Web responsive 📱💻**
 
@@ -128,7 +125,6 @@ Aquest codi gestiona el menú de navegació per a dispositius mòbils, on es mos
 ```
 A més de l'ús de CSS, també s'ha utilitzat JavaScript per millorar l'adaptabilitat de la pàgina web en certs aspectes, com la barra de navegació. En dispositius petits, el menú es transforma en un botó o icona que, en prémer-lo, expandeix les opcions del menú, en lloc de mostrar-les de manera permanent com en les pantalles grans.
 
----
 
 ## **Parts rellevants ‼️**
 
@@ -208,7 +204,6 @@ body {
 
 Una altra part rellevant de la pàgina és el mapa interactiu, que permet als usuaris veure les ubicacions dels espais verds i circuits d’entrenament a Tarragona. Es fa servir la biblioteca Leaflet.js per generar el mapa i mostrar-lo a la pàgina web. Els usuaris poden interactuar amb el mapa, visualitzant les ubicacions i les rutes per fer exercici a l'aire lliure.
 
----
 
 ## **Cartografia 📌**
 
@@ -267,13 +262,11 @@ marker.bindPopup('<b>Espai Verd 1</b><br>Una zona excel·lent per entrenar').ope
 3. **Millorar l'accessibilitat**:
    Afegir més funcionalitats per millorar l'accessibilitat, com l'ajust de la mida del text o el contrast dels colors per a persones amb discapacitat visual. Això garantiria que la web sigui usable per a un públic més divers.
 
----
 
 ## **Autor ✒️**
 
 * **Diana Maria Giurgiu** - (dianamaria.giurgiu@estudiants@urv.cat) 
 
----
 
 ## **Agraiments 🎁**
 
