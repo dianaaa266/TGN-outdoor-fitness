@@ -265,7 +265,7 @@ marker.bindPopup('<b>Espai Verd 1</b><br>Una zona excel·lent per entrenar').ope
 
 ## **Autor ✒️**
 
-* **Diana Maria Giurgiu** - (dianamaria.giurgiu@estudiants@urv.cat) 
+* **Diana Maria Giurgiu** - (dianamaria.giurgiu@estudiants.urv.cat) 
 
 
 ## **Agraiments 🎁**
