@@ -28,17 +28,14 @@ Per recollir la informació necessària per a aquest projecte, s'han utilitzat d
 
 Per garantir la legalitat i l'ús ètic de totes les imatges d'aquesta pàgina web, era imprescindible complir amb les normatives de drets d'autor i les llicències d'ús. Com a resultat, es va decidir utilitzar imatges exclusivament originals. Això inclou tant imatges per a aquest projecte com altres escollides específicament per a la pàgina web, que ofereixen una representació directa dels espais.
 
-<img src="img/fondo2.jpg" width="200" height="200">
+<img src="img/fondo2.jpg" width="400" height="200"> <img src="img/mapa-section.jpg" width="500" height="200">
 
-<img src="img/fondo-mapa.jpg" width="200" height="200">
 
 #### 3.2 Imatges generades amb IA
 
 S'ha fet servir també imatges generades amb intel·ligència artificial (IA) per poder facilitar la visualització i crear imatges de membres per il·lustrar el projecte. Aquestes imatges s'han creat per oferir una millor comprensió visual de l'equip darrere del projecte i de la seva tasca.
 
-<img src="img/fondo-membres.jpg" width="200" height="200">
-
-<img src="img/membre4.jpg" width="200" height="200">
+<img src="img/fondo-membres.jpg" width="200" height="200"> <img src="img/membre4.jpg" width="200" height="200">
 
 #### 3.3 Logo creat amb BandCrowd
 
