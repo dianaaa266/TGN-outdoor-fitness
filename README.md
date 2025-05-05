@@ -35,13 +35,13 @@ Per garantir la legalitat i l'ús ètic de totes les imatges d'aquesta pàgina w
 
 S'ha fet servir també imatges generades amb intel·ligència artificial (IA) per poder facilitar la visualització i crear imatges de membres per il·lustrar el projecte. Aquestes imatges s'han creat per oferir una millor comprensió visual de l'equip darrere del projecte i de la seva tasca.
 
-<img src="img/fondo-membress.jpg" width="200" height="200"> <img src="img/membre4.jpg" width="175" height="200">
+<img src="img/membre4.jpg" width="175" height="200">
 
 #### 3.3 Logo creat amb BandCrowd
 
 El **logo** de **TGN Outdoor Fitness** ha estat creat utilitzant l'eina **Logo Creator** de la pàgina web **BandCrowd**. Aquesta eina ha permès crear un disseny professional i modern per a representar la imatge del projecte. El logo simbolitza l'activitat a l'aire lliure i la connexió amb la natura que caracteritza aquest projecte.
 
-<img src="img/logo.png" width="175" height="175">
+<img src="img/logo.png" width="155" height="155">
 
 ---
 
