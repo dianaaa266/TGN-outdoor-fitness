@@ -271,17 +271,12 @@ marker.bindPopup('<b>Espai Verd 1</b><br>Una zona excel·lent per entrenar').ope
 
 ## **Autor ✒️**
 
-* **Laura [Nom complet]** - *Dissenyadora i desenvolupadora web per al projecte TGN Outdoor Fitness*
-  - **Funció**: Desenvolupament de la pàgina web i gestió de continguts.
-  - **Correu electrònic**: [laura@tgnoutdoorfitness.com](mailto:laura@tgnoutdoorfitness.com)
-  - **GitHub**: [@LauraGit](https://github.com/LauraGit)
+* **Diana Maria Giurgiu** - (dianamaria.giurgiu@estudiants@urv.cat) 
 
 ---
 
 ## **Agraiments 🎁**
 
-1. **TGN Outdoor Fitness Team** - *Gràcies a tot l'equip per la seva dedicació i col·laboració en el projecte.*
-2. **Universitat Rovira i Virgili (URV)** - *Per proporcionar les eines i el suport necessari per al desenvolupament d'aquest projecte.*
-3. **Ajuntament de Tarragona** - *Per facilitar l'accés als espais verds i la informació geogràfica necessària per dur a terme l'anàlisi i disseny dels circuits d'entrenament.*
-4. **Leaflet.js i QGIS Community** - *Gràcies a les comunitats de Leaflet.js i QGIS per proporcionar eines tan potents i útils per a la creació de mapes interactius.*
+1. **Carlos Soriano** - *Professor de l'assignatura d'eines web*
+2. **Benito Zaragozí** - *Professor de l'assignatura d'eines web*
 
