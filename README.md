@@ -157,7 +157,7 @@ La **barra de navegació** és un element essencial per a la pàgina web, ja que
 </header>
 ```
 
-####Exemple de codi CSS per a la barra de navegació:
+#### Exemple de codi CSS per a la barra de navegació:
 ```css
 /* Menú Desplegable per a dispositius mòbils */
 @media screen and (max-width: 768px) {
@@ -173,11 +173,11 @@ La **barra de navegació** és un element essencial per a la pàgina web, ja que
 }
 ```
 
-### **2. Icona light/dark
+### **2. Icona light/dark**
 
 La pàgina inclou una icona de canvi de mode que permet als usuaris alternar entre el mode clar i el mode fosc. Aquesta funcionalitat es gestiona a través de JavaScript, i els estils s'apliquen amb CSS per modificar els colors de fons i text en funció del mode seleccionat.
 
-####Exemple de codi JavaScript per a la icona light/dark:
+#### Exemple de codi JavaScript per a la icona light/dark:
 ```js
 const toggle = document.getElementById('theme-toggle');
 toggle.addEventListener('change', () => {
@@ -185,7 +185,7 @@ toggle.addEventListener('change', () => {
 });
 ```
 
-####Exemple de codi CSS per al mode fosc/clar:
+#### Exemple de codi CSS per al mode fosc/clar:
 ```css
 /* Estils per al mode fosc */
 body.dark {
@@ -200,7 +200,7 @@ body {
 }
 ```
 
-### **3. Mapa interactiu
+### **3. Mapa interactiu**
 
 Una altra part rellevant de la pàgina és el mapa interactiu, que permet als usuaris veure les ubicacions dels espais verds i circuits d’entrenament a Tarragona. Es fa servir la biblioteca Leaflet.js per generar el mapa i mostrar-lo a la pàgina web. Els usuaris poden interactuar amb el mapa, visualitzant les ubicacions i les rutes per fer exercici a l'aire lliure.
 
