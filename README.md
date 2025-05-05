@@ -28,23 +28,23 @@ Per recollir la informació necessària per a aquest projecte, s'han utilitzat d
 
 Per garantir la legalitat i l'ús ètic de totes les imatges d'aquesta pàgina web, era imprescindible complir amb les normatives de drets d'autor i les llicències d'ús. Com a resultat, es va decidir utilitzar imatges exclusivament originals. Això inclou tant imatges per a aquest projecte com altres escollides específicament per a la pàgina web, que ofereixen una representació directa dels espais.
 
-![fondo2](img/fondo2.jpg)
+<img src="img/fondo2.jpg" width="200" height="200">
 
-![fondo-mapa](img/fondo-mapa.jpg)
+<img src="img/fondo-mapa.jpg" width="200" height="200">
 
 #### 3.2 Imatges generades amb IA
 
 S'ha fet servir també imatges generades amb intel·ligència artificial (IA) per poder facilitar la visualització i crear imatges de membres per il·lustrar el projecte. Aquestes imatges s'han creat per oferir una millor comprensió visual de l'equip darrere del projecte i de la seva tasca.
 
-![fondo-membres](img/fondo-membres.jpg)
+<img src="img/fondo-membres.jpg" width="200" height="200">
 
-![membre4](img/membre4.jpg)
+<img src="img/membre4.jpg" width="200" height="200">
 
 #### 3.3 Logo creat amb BandCrowd
 
 El **logo** de **TGN Outdoor Fitness** ha estat creat utilitzant l'eina **Logo Creator** de la pàgina web **BandCrowd**. Aquesta eina ha permès crear un disseny professional i modern per a representar la imatge del projecte. El logo simbolitza l'activitat a l'aire lliure i la connexió amb la natura que caracteritza aquest projecte.
 
-![Logo TGN Outdoor Fitness](img/logo.png)
+<img src="img/logo.png" width="300" height="300">
 
 ---
 
