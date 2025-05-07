@@ -1,1 +1,0 @@
-var json_Anella_11 = {"type":"FeatureCollection","name":"Anella_11","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nom":"Anella Mediterrània"},"geometry":{"type":"Point","coordinates":[1.203001847842698,41.12250757504971]}}]}
