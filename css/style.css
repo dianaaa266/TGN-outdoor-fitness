@@ -1062,7 +1062,7 @@ header {
 
 /* Quan activem el dark mode */
 body.dark {
-    background-color: #121212;
+    background-color: #121212 !important;
     color: #f0f0f0;
 }
 
@@ -1226,3 +1226,4 @@ body.dark .top-social,
 body.dark .separator {
     color: inherit !important; /* ✅ Manté el color original */
 }
+
