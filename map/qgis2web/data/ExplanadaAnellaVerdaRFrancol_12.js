@@ -1,0 +1,1 @@
+var json_ExplanadaAnellaVerdaRFrancol_12 = {"type":"FeatureCollection","name":"ExplanadaAnellaVerdaRFrancol_12","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1"},"geometry":{"type":"Point","coordinates":[1.237007399343802,41.11673686497258]}}]}

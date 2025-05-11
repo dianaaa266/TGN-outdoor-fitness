@@ -1,1 +1,0 @@
-var json_CampdeMart_11 = {"type":"FeatureCollection","name":"CampdeMart_11","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nom":"Camp de Mart"},"geometry":{"type":"Point","coordinates":[1.255067871763784,41.119843006676469]}}]}

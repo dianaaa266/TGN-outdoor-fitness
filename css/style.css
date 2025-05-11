@@ -909,6 +909,38 @@ canvas {
 }
 
 
+.inici-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+.intro-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.intro-flex img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.intro-text {
+    flex: 1; /* 🔥 això és clau */
+    text-align: justify;
+}
+
+
+.motivacio-card p,
+.motivacio-card li {
+    font-size: 16px;
+    color: #1b1b1b;
+    text-align: justify;
+}
 
 
 
@@ -1067,7 +1099,7 @@ body.dark {
 }
 
 body.dark header {
-    background-color: #1e1e1e;
+    background-color: #1e1e1e !important;
 }
 
 body.dark .footer {
@@ -1225,5 +1257,18 @@ body.dark .top-meteo a {
 body.dark .top-social,
 body.dark .separator {
     color: inherit !important; /* ✅ Manté el color original */
+}
+
+
+/* Estil normal (light mode) */
+.info-extra-box {
+    background: #e0f7fa;
+    color: #2b2b2b;
+}
+
+/* Estil per dark mode */
+body.dark .info-extra-box {
+    background: #222;     /* o #1e1e1e per a més contrast suau */
+    color: #f5f5f5;
 }
 
